@@ -1,13 +1,18 @@
- import React from 'react';
-    import MyComponent from './MyComponent';
-    import './App.css';
+import { useState } from 'react';
+import MyComponent from './MyComponent';
+import './App.css';
 
-    function App() {
-      return (
-        <div className="App">
-          <MyComponent />
-        </div>
-      );
-    }
+function App() {
+  const [count, setCount] = useState(0);
 
-    export default App;
+  return (
+    <div className="App">
+      <MyComponent title="Hello from MyComponent!" />
+      <button type="button" onClick={() => setCount((c) => c + 1)}>
+        Count is {count}
+      </button>
+    </div>
+  );
+}
+
+export default App;
