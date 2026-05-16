@@ -181,4 +181,10 @@
     right: 0;
     border-right-color: var(--border);
   }
+  .App {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 }
